@@ -61,7 +61,7 @@ router.post('/add', async(req, res, next) => {
         let newReport = Report({
 
             "url": req.body.url,
-            "lureCategory": req.body.lureCategory,
+            "lurecategory": req.body.lurecategory,
             "description": req.body.description,
             "riskstatus": "Pending",
             "submissiondate": new Date()
