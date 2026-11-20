@@ -45,7 +45,8 @@ router.get('/add', async(req, res, next) => {
     catch(err) {
         console.log(err);
 
-        res.render('Reports/list', {
+        res.render('Reports/add', {
+            title: 'Submit URL',
             error: 'Error on Server'
         });
     }
