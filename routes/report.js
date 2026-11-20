@@ -86,4 +86,23 @@ router.post('/add', async(req, res, next) => {
 
 });
 
+router.get('/views', async (req, res, next) => {
+    try {
+        const ReportList = await Report.find();
+
+        res.render('report', {
+            title: 'LinkHop Reports',
+            ReportList: ReportList
+        });
+    } catch (err) {
+        console.log(err);
+
+        res.render('report', {
+            title: 'LinkHop Reports',
+            error: 'Error on Server',
+            ReportList: []
+        });
+    }
+});
+
 module.exports = router;
