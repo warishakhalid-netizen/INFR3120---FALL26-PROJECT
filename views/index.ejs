@@ -1,11 +1,50 @@
 <%- include partials/header.ejs %>
 <%- include partials/navbar.ejs %>
-<div class="container mt-5 mb-5 pb-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="card shadow-sm">
+<!--Main page container-->
+<div class="container-fluid mt-4 mb-5 px-4">
+<!--Bootstrap row for the two sections-->
+  <div class="row align-items-center g-4">
+<!--Left side: Intro page content-->
+    <div class="col-12 col-lg-6">
+      <h1 class="text-center display-5 fw-bold mb-4">
+        Investigate Suspicious
+<!-- Change colour of text-->
+        <span class="text-success">Links!</span>
+      </h1>
+
+      <p class="lead mb-4">
+        Analyze suspicious URLs and explore potential cybersecurity
+        warning signs before opening them.
+      </p>
+
+<!--Advertise LinkHop features-->
+<div class="row text-center mt-4">
+  <div class="col-4">
+    <i class="fa-solid fa-link fa-2x text-success mb-3"></i>
+    <h2> Check Redirects</h2>
+  </div>
+
+  <div class="col-4">
+    <i class="fa-solid fa-server fa-2x text-success mb-3"></i>
+    <h3> View Destination IP </h3>
+  </div>
+
+    <div class="col-4">
+    <i class="fa-solid fa-shield-halved fa-2x text-success mb-3"></i>
+    <h4> SSL/TLS </h4>
+  </div>
+</div>
+</div>
+
+      <!--Right side: linkhop form-->
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm rounded-4">
         <div class="card-body p-4">
-          <img src="/stylesheets/images/LINKHOP Logo.jpg" alt="LinkHop logo" class="img-fluid rounded-4">
+          <img src="/stylesheets/images/LINKHOP Logo.jpg" 
+          alt="LinkHop logo" 
+          class="img-fluid rounded-4 d-block mx-auto mb-3"
+          style="max-width:220px">
+
           <p class="text-center text-muted mb-4">Submit a link for analysis.</p>
 
           <form action="/reports/add" method="POST">
@@ -39,5 +78,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 <%- include partials/footer.ejs %>
