@@ -13,7 +13,7 @@ router.get('/', async(req, res, next) => {
 
         const ReportList = await Report.find();
 
-        res.render('Reports/list', {
+        res.render('report', {
             title: 'LinkHop Reports',
             ReportList: ReportList
         });
@@ -23,7 +23,7 @@ router.get('/', async(req, res, next) => {
     catch(err) {
         console.log(err);
 
-        res.render('Reports/list', {
+        res.render('report', {
             error: 'Error on Server',
             ReportList: []
         });
@@ -86,7 +86,7 @@ router.post('/add', async(req, res, next) => {
 
 });
 
-router.get('/views', async (req, res, next) => {
+router.get('/view', async (req, res, next) => {
     try {
         const ReportList = await Report.find();
 
@@ -104,5 +104,4 @@ router.get('/views', async (req, res, next) => {
         });
     }
 });
-
 module.exports = router;
