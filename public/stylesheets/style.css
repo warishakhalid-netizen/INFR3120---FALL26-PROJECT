@@ -4,5 +4,20 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color:  #00a88f;
 }
+
+
+.btn-primary {
+    background-color: #00a88f;
+    border-color: #00a88f;
+}
+
+.btn-primary:hover {
+    background-color: #008b77;
+    border-color: #008b77;
+}
+
+
+
+

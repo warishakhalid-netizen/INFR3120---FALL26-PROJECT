@@ -13,7 +13,7 @@ let app = express();
 
 //Moongose connection
 const mongoose = require('mongoose');
-let DB = require('./Config/db');
+let DB = require('./config/db');
 mongoose.connect(DB.URI);
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error'));
